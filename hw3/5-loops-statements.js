@@ -19,6 +19,27 @@
 // For numbers which are multiples of both three and five print "FizzBuzz".
 
 for (i = 1; i < 101; i++) {
+    // you can save i % 3 == 0 and i % 5 == 0 in variables and then use it's values
+    // eg:
+    
+    /*
+    var div3 = i % 3 == 0;
+    var div5 = i % 3 == 0;
+    
+    
+    if (div3 && div5) {
+        console.log('FizzBuzz');
+    }
+    else if (div5) {
+        console.log('Buzz');
+    }
+    else if (div3) {
+        console.log("Fizz");
+    }
+    else {
+        console.log(i);
+    }
+    */
     if (i % 3 == 0 && i % 5 == 0) {
         console.log('FizzBuzz');
     }

@@ -2,6 +2,8 @@
 // # Домашнее задание по условным операторам JS.
 //
 // ## 1 задание
+
+// for all tasks where is checking with other a values?????
 //
 // Если переменная a равна нулю, то выведите 'Верно!', иначе выведите 'Неверно!'.
 // Проверьте работу скрипта при a, равном 1, 0, -3.
@@ -15,6 +17,7 @@
             alert("Неверно!");
             break;
     }
+// in this case better use if/else
 
 // ## 2 задание
 //
@@ -37,6 +40,13 @@
 
     var test = confirm('true of false?');
     test === true ? console.log("Верно!") : console.log("Неверно!");
+    // 2 shorter variants:
+    
+    /*
+        test ? console.log("Верно!") : console.log("Неверно!");    
+        or
+        console.log(test ? "Верно!" : "Неверно!")
+    */
 
     var test = confirm("true of false?");
     if (test === true) {

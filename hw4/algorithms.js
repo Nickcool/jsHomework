@@ -11,6 +11,13 @@
 // P.S. Код также должен легко модифицироваться для любых других интервалов.
 
 function simple (num1, num2) {
+    // впринципе зачем тебе делать одно и тоже тут и в else 
+    // можно просто обьявить переменные например less, bigger
+    // где less = num1 > num2 ? num2 : num1;
+    // bigger = num1 > num2 ? num1 : num2;
+
+    // а потом уже работать в переменными less bigger 
+
     if (num2 > num1) {
         for (i = num1; i < num2; i++) {
             for (j = num1; j <= i; j++) {
@@ -57,11 +64,12 @@ function addClass (obj, cls) {
     var arr = obj.className.split(' ');
 
     for (i = 0; i < arr.length; i++) {
+        // лучше три равно поставить ===
         if (arr[i] == cls) return;
     }
+    
     arr.push(cls.trim());
     obj.className = arr.join(' ');
-
 }
 
 addClass(obj, '     new'); // obj.className='open menu new'
@@ -96,16 +104,18 @@ function removeClass (obj, cls) {
     for (i = 0; i < arr.length; i++) {
         if (arr[i] === cls) {
             var index = arr.indexOf(arr[i]);
+            // можно сократить строку arr.splice(arr.indexOf(arr[i]), 1);
                 arr.splice(index, 1);
         }
         else {
+            // return не работает ля цыклов нужно использовать break(прервать выполнение всего цыкла) или continue(прервать выполнение этой итерации);
             return;
         }
 
     }
     obj.className = arr.join(' ');
-
 }
+
 removeClass(obj, 'open'); // obj.className='menu'
 removeClass(obj, 'blabla'); // без изменений (нет такого класса)
 
